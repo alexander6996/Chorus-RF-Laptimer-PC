@@ -27,7 +27,7 @@ Chorus RF Laptimer PC
 - Configuración de piloto
 - Sección de carreras
   - En la primera version se da soporte a Bluetooth.
-- Para velocidad en conexión se guarda la configuración de la ultima conexion.
+- Para velocidad en conexión se guarda ultima configuración exitosa.
 
 ## Requerimientos
 
