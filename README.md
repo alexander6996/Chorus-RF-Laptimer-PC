@@ -39,7 +39,7 @@ Chorus RF Laptimer PC
 
 - [ChorusRfLaptimer_v1.0_BETA](versions/ChorusRfLaptimer_v1.0_BETA.zip)
 
-## Hoja de ruta - Nuevas funciones
+## Hoja de ruta - Proximas funciones
 
 - Mejoras esteticas.
 - Sonidos
