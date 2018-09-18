@@ -32,7 +32,7 @@ public class AppState {
     public static final int TONE_PREPARE = ToneGenerator.TONE_DTMF_1;
     public static final int DURATION_PREPARE = 80;
     public static final int TONE_GO = ToneGenerator.TONE_DTMF_D;
-    public static final int DURATION_GO = 600;
+    public static final int DURATION_GO = 700;
     public static final int TONE_LAP = ToneGenerator.TONE_DTMF_S;
     public static final int DURATION_LAP = 400;
     public static final int MIN_TIME_BEFORE_RACE_TO_SPEAK = 5; //seconds, don't speak "Prepare" message if less time is set

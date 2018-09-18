@@ -25,6 +25,7 @@ import com.chorusrflaptimer.util.UtilBluetooth;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 /**
  * @author Alexander Rios <br> 15/09/2018
@@ -52,14 +53,14 @@ public class ConexionWindow extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(ConexionWindow.class.getResource("/com/chorusrflaptimer/img/ic_connection.png")));
 		setTitle("");
 		setResizable(false);
-		setBounds(100, 100, 272, 147);
+		setBounds(100, 100, 272, 164);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 
 		tipoCmb = new JComboBox();
 		tipoCmb.addItem("Bluetooth");
-		tipoCmb.addItem("Wifi");
+		//tipoCmb.addItem("Wifi");
 		tipoCmb.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int selection = tipoCmb.getSelectedIndex();
@@ -73,7 +74,8 @@ public class ConexionWindow extends JFrame {
 			}
 		});
 
-		conectarBtn = new JButton("Conectar");
+		conectarBtn = new JButton("Connect");
+		conectarBtn.setIcon(new ImageIcon(ConexionWindow.class.getResource("/com/chorusrflaptimer/img/connect.png")));
 		conectarBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				connect();
@@ -82,14 +84,16 @@ public class ConexionWindow extends JFrame {
 
 		devicesCmb = new JComboBox();
 
-		JButton btnDesconectar = new JButton("Desconectar");
+		JButton btnDesconectar = new JButton("Disconnect");
+		btnDesconectar.setIcon(new ImageIcon(ConexionWindow.class.getResource("/com/chorusrflaptimer/img/disconnect.png")));
 		btnDesconectar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				disconect();
 			}
 		});
 		
-		button = new JButton("...");
+		button = new JButton("");
+		button.setIcon(new ImageIcon(ConexionWindow.class.getResource("/com/chorusrflaptimer/img/load.png")));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "Loading...", "", JOptionPane.INFORMATION_MESSAGE);
@@ -110,13 +114,13 @@ public class ConexionWindow extends JFrame {
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addComponent(tipoCmb, 0, 295, Short.MAX_VALUE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(tipoCmb, 0, 232, Short.MAX_VALUE)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addComponent(conectarBtn, GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+							.addComponent(conectarBtn, GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
 							.addPreferredGap(ComponentPlacement.UNRELATED)
 							.addComponent(btnDesconectar))
-						.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(devicesCmb, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(button, GroupLayout.PREFERRED_SIZE, 34, Short.MAX_VALUE)))
@@ -127,11 +131,15 @@ public class ConexionWindow extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
 					.addComponent(tipoCmb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(devicesCmb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button))
-					.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(button)
+							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(devicesCmb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)))
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(conectarBtn)
 						.addComponent(btnDesconectar)))

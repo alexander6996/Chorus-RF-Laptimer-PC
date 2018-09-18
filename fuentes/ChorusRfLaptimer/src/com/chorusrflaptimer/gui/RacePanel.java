@@ -29,6 +29,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
@@ -283,7 +284,7 @@ public class RacePanel extends JPanel {
 	                    int timeBeforeRace = AppState.getInstance().timeToPrepareForRace;
 	                    if (timeBeforeRace >= AppState.MIN_TIME_BEFORE_RACE_TO_SPEAK) {
 	                        //AppState.getInstance().textSpeaker.speak(R.string.race_announcement_starting, timeBeforeRace - 2);
-	                    	System.out.println(timeBeforeRace - 2);
+	                    	//System.out.println(timeBeforeRace - 2);
 	                    }
 
 	                   mRaceStartingHandler.sendEmptyMessage(timeBeforeRace);
@@ -314,17 +315,19 @@ public class RacePanel extends JPanel {
 	        });
 	        
 	        generalTbl.getColumnModel().getColumn(0).setCellRenderer(new StatusColumnCellRenderer());
-	        generalTbl.getColumnModel().getColumn(0).setPreferredWidth(30);
+	        generalTbl.getColumnModel().getColumn(0).setPreferredWidth(20);
 
 	        detalleTbl.getColumnModel().getColumn(0).setCellRenderer(new StatusColumnCellRenderer());
-	        detalleTbl.getColumnModel().getColumn(0).setPreferredWidth(30);
+	        detalleTbl.getColumnModel().getColumn(0).setPreferredWidth(20);
 
 	}
 	
 	public class StatusColumnCellRenderer extends DefaultTableCellRenderer {
 		@Override
-		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
-				int row, int col) {
+		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int col) {
+			Component cell = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, col);
+            cell.setForeground(new Color(Integer.parseInt((String) value)));
+			
 			// Cells are by default rendered as a JLabel.
 			JLabel l = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, col);
 			l.setBackground(new Color(Integer.parseInt((String) value)));
@@ -332,7 +335,7 @@ public class RacePanel extends JPanel {
 			return l;
 		}
 	}
-
+	
 	public void loadMsg() {
 		btnStop.setText(UtilMessage.getMsg("stop_race"));
 		btnRace.setText(UtilMessage.getMsg("start_race"));
@@ -524,7 +527,6 @@ public class RacePanel extends JPanel {
                 sb.append(lapNumber + "," + pilot + "," + band + channel + "," + freq+ "," + Utils.convertMsToReportTime(lapResult.getMs()) + "," + recordTime + "\n");
             }
         }
-        System.out.println(sb.toString());
         return sb.toString();
     }
 

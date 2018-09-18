@@ -140,7 +140,6 @@ public class UtilBluetooth {
 			try {
 				name = btDevice.getFriendlyName(false);
 				devices.add(new String[] { btDevice.getFriendlyName(true), btDevice.getBluetoothAddress() });
-				System.out.println("device found: " + btDevice.getFriendlyName(false));
 				System.out.println("device found: " + btDevice.getFriendlyName(true));
 				System.out.println("device found: " + btDevice.getBluetoothAddress());
 			} catch (Exception e) {

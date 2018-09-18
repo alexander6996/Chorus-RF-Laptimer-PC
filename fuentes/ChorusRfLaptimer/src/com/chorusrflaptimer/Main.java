@@ -16,6 +16,9 @@ public class Main {
 	
 	public void run() {
 		AppState.getInstance().textSpeaker = new TextSpeaker();
+		
+		//load sounds
+		//UtilSound.getInstance();
 			
 		//load properties config
 		AppState.getInstance().preferences = SharedPreferences.getInstance();

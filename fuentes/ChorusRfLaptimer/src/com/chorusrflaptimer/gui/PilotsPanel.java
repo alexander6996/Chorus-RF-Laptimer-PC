@@ -111,7 +111,6 @@ public class PilotsPanel extends JPanel {
     }
     
     public void updateResults() {
-    	System.out.println("updateResults");
 //        ListView listView = (ListView)mRootView.findViewById(R.id.lvPilots);
 //        ((BaseAdapter) listView.getAdapter()).notifyDataSetChanged();
     }
