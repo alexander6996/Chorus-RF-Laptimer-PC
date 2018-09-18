@@ -7,9 +7,9 @@
 <br>
 <br>
 Chorus RF Laptimer PC
-<br> Es una iniciativa con el objetivo de tener una aplicaci髇 de escritorio
-<br> que funcione en diferentes sistemas operativos.
-<br>
+<br> Es una iniciativa con el objetivo de tener una aplicaci贸n de escritorio
+<br> que funcione en diferentes sistemas operativos, tomando como base el proyecto
+<br> de Voroshkov - Chorus-RF-Laptimer.
 <br>
 <br>
 <br>
@@ -21,13 +21,13 @@ Chorus RF Laptimer PC
 
 ## Caracteristicas
 
-- Funcionalidad y l骻ica similar a Chorus RF Laptimer.
-- Configuraci髇 principal
-- Configuraci髇 de frecuencias
-- Configuraci髇 de piloto
-- Secci髇 de carreras
+- Funcionalidad y l贸gica similar a Chorus RF Laptimer.
+- Configuraci贸n principal
+- Configuraci贸n de frecuencias
+- Configuraci贸n de piloto
+- Secci贸n de carreras
   - En la primera version se da soporte a Bluetooth.
-- Para velocidad en conexi髇 se guarda ultima configuraci髇 exitosa.
+- Para velocidad en conexi贸n se guarda ultima configuraci贸n exitosa.
 
 ## Requerimientos
 
@@ -44,18 +44,18 @@ Chorus RF Laptimer PC
 - Mejoras esteticas.
 - Sonidos
 - Soporte a WIFI (DT-06)
-- Protocolo de integraci髇 (WS-REST, Otros software de lap timer.) 
+- Protocolo de integraci贸n (WS-REST, Otros software de lap timer.) 
 - Soporte en Linux y MAC OS
 
 ## Captura de pantalla
 
-Configurataci髇
+Configurataci贸n
 
-<img src="docs/img/Capture_01.PNG" alt="Configurataci髇" height="300"/>
+<img src="docs/img/Capture_01.PNG" alt="Configurataci贸n" height="300"/>
 
-Conexi髇
+Conexi贸n
 
-<img src="docs/img/Capture_02.PNG" alt="Conexi髇" height="300"/>
+<img src="docs/img/Capture_02.PNG" alt="Conexi贸n" height="300"/>
 
 Frecuencia
 
