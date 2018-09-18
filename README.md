@@ -18,6 +18,7 @@ Chorus RF Laptimer PC
 ## Referencias
 
 - [Voroshkov - Chorus-RF-Laptimer](https://github.com/voroshkov/Chorus-RF-Laptimer) - https://github.com/voroshkov/Chorus-RF-Laptimer
+- https://github.com/voroshkov/Chorus-RF-Laptimer#contributors
 
 ## Caracteristicas
 
