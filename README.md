@@ -38,7 +38,7 @@ Chorus RF Laptimer PC
 
 ## Descarga
 
-- [ChorusRfLaptimer_v1.0_BETA](versions/ChorusRfLaptimer_v1.0_BETA.zip)
+- [ChorusRfLaptimer_v1.1_BETA](versions/ChorusRfLaptimer_v1.1_BETA.zip)
 
 ## Hoja de ruta - Proximas funciones
 
@@ -61,10 +61,14 @@ Conexión
 Frecuencia
 
 <img src="docs/img/Capture_03.PNG" alt="Frecuencia" height="300"/>
+<br><br>
+<img src="docs/img/Capture_07.PNG" alt="Frecuencia" height="300"/>
 
 Piloto
 
 <img src="docs/img/Capture_04.PNG" alt="Piloto" height="300"/>
+<br><br>
+<img src="docs/img/Capture_08.PNG" alt="Piloto" height="300"/>
 
 Resultado Carrera General
 
